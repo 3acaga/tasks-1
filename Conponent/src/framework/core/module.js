@@ -1,16 +1,12 @@
 export class Module {
-    constructor(config) {
-        this.components = config.components;
-    }
+  constructor(config) {
+    this.components = config.components;
+  }
 
-    start() {
-        this.initComponents();
-    }
-
-    initComponents() {
-        this.components.forEach(c => c.render());
-        this.components.forEach(c => c.work());
-    }
-
-
+  start() {
+    this.components.forEach(c => {
+      c.render();
+      c.work();
+    });
+  }
 }
